@@ -8,15 +8,41 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showingSheet = false
+    @State private var selectedCase: SwifFulChapters = .startLearn
     var body: some View {
+        NavigationStack {
+            Form {
+                Section {
+                    Picker("Learning Topics", selection: $selectedCase) {
+                        ForEach(SwifFulChapters.allCases, id: \.self) {
+                            Text($0.title)
+                        }
+                    }
+                    .pickerStyle(.wheel)
+                }
+            }
+        }
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Button("Show Sheet") {
+                showingSheet.toggle()
+            }
+            .fullScreenCover(isPresented: $showingSheet) {
+                getView(for: selectedCase)
+            }
         }
         .padding()
     }
+    
+    func getView(for currentChapter: SwifFulChapters) -> some View {
+        switch currentChapter {
+        case .startLearn:
+            AnyView(LearningTopicsView())
+        case .doTryCatchThrows:
+            AnyView(DoCatchTryThrows())
+        }
+    }
+    
 }
 
 #Preview {
