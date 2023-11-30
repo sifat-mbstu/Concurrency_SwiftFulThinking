@@ -10,6 +10,7 @@ import Foundation
 enum SwifFulChapters: Int,CaseIterable {
     case startLearn
     case doTryCatchThrows
+    case imageDownloadAsyncAwait
 }
 
 extension SwifFulChapters {
@@ -19,6 +20,9 @@ extension SwifFulChapters {
             return "Start Learn"
         case .doTryCatchThrows:
             return "Do-Try-Catch-Throws"
+        case .imageDownloadAsyncAwait:
+            return "Download Images With Async/Await, @escaping and Combine"
         }
+        
     }
 }

@@ -40,7 +40,11 @@ struct ContentView: View {
             AnyView(LearningTopicsView())
         case .doTryCatchThrows:
             AnyView(DoCatchTryThrows())
+        case .imageDownloadAsyncAwait:
+            AnyView(ImageDownloadAsyncAwait())
         }
+        
+        
     }
     
 }

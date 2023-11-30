@@ -7,24 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35A18FF52B1841190009EEBA /* 3) ImageDownloadAsyncAwait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A18FF42B1841190009EEBA /* 3) ImageDownloadAsyncAwait.swift */; };
+		35A18FF72B18419B0009EEBA /* 1) LearningTopics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A18FF32B1840E40009EEBA /* 1) LearningTopics.swift */; };
 		35C00FC82B15B34D00DE2EB8 /* Concurrency_SwiftFull_ThinkingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C00FC72B15B34D00DE2EB8 /* Concurrency_SwiftFull_ThinkingApp.swift */; };
 		35C00FCA2B15B34D00DE2EB8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C00FC92B15B34D00DE2EB8 /* ContentView.swift */; };
 		35C00FCC2B15B35100DE2EB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35C00FCB2B15B35100DE2EB8 /* Assets.xcassets */; };
 		35C00FCF2B15B35100DE2EB8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35C00FCE2B15B35100DE2EB8 /* Preview Assets.xcassets */; };
 		35C00FD62B15B45B00DE2EB8 /* SwiftfulThinkingChapters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C00FD52B15B45B00DE2EB8 /* SwiftfulThinkingChapters.swift */; };
-		35C00FD82B15B6E100DE2EB8 /* DoCatchTryThrows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C00FD72B15B6E100DE2EB8 /* DoCatchTryThrows.swift */; };
-		35C00FDA2B15EF9A00DE2EB8 /* LearningTopics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C00FD92B15EF9A00DE2EB8 /* LearningTopics.swift */; };
+		35C00FD82B15B6E100DE2EB8 /* 2) DoCatchTryThrows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C00FD72B15B6E100DE2EB8 /* 2) DoCatchTryThrows.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35A18FF32B1840E40009EEBA /* 1) LearningTopics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1) LearningTopics.swift"; sourceTree = "<group>"; };
+		35A18FF42B1841190009EEBA /* 3) ImageDownloadAsyncAwait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "3) ImageDownloadAsyncAwait.swift"; sourceTree = "<group>"; };
 		35C00FC42B15B34D00DE2EB8 /* Concurrency_SwiftFull_Thinking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Concurrency_SwiftFull_Thinking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35C00FC72B15B34D00DE2EB8 /* Concurrency_SwiftFull_ThinkingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concurrency_SwiftFull_ThinkingApp.swift; sourceTree = "<group>"; };
 		35C00FC92B15B34D00DE2EB8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		35C00FCB2B15B35100DE2EB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35C00FCE2B15B35100DE2EB8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		35C00FD52B15B45B00DE2EB8 /* SwiftfulThinkingChapters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftfulThinkingChapters.swift; sourceTree = "<group>"; };
-		35C00FD72B15B6E100DE2EB8 /* DoCatchTryThrows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoCatchTryThrows.swift; sourceTree = "<group>"; };
-		35C00FD92B15EF9A00DE2EB8 /* LearningTopics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LearningTopics.swift; path = ../../../../TigerITLearning/LearningTopics.swift; sourceTree = "<group>"; };
+		35C00FD72B15B6E100DE2EB8 /* 2) DoCatchTryThrows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "2) DoCatchTryThrows.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35A18FF22B1840D10009EEBA /* ChapetersSwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				35C00FC92B15B34D00DE2EB8 /* ContentView.swift */,
+				35A18FF32B1840E40009EEBA /* 1) LearningTopics.swift */,
+				35C00FD72B15B6E100DE2EB8 /* 2) DoCatchTryThrows.swift */,
+				35A18FF42B1841190009EEBA /* 3) ImageDownloadAsyncAwait.swift */,
+			);
+			path = ChapetersSwiftUI;
+			sourceTree = "<group>";
+		};
+		35A18FF62B1841370009EEBA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				35C00FCB2B15B35100DE2EB8 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		35C00FBB2B15B34D00DE2EB8 = {
 			isa = PBXGroup;
 			children = (
@@ -57,12 +78,10 @@
 		35C00FC62B15B34D00DE2EB8 /* Concurrency_SwiftFull_Thinking */ = {
 			isa = PBXGroup;
 			children = (
-				35C00FD72B15B6E100DE2EB8 /* DoCatchTryThrows.swift */,
+				35A18FF62B1841370009EEBA /* Resources */,
+				35A18FF22B1840D10009EEBA /* ChapetersSwiftUI */,
 				35C00FC72B15B34D00DE2EB8 /* Concurrency_SwiftFull_ThinkingApp.swift */,
 				35C00FD52B15B45B00DE2EB8 /* SwiftfulThinkingChapters.swift */,
-				35C00FC92B15B34D00DE2EB8 /* ContentView.swift */,
-				35C00FD92B15EF9A00DE2EB8 /* LearningTopics.swift */,
-				35C00FCB2B15B35100DE2EB8 /* Assets.xcassets */,
 				35C00FCD2B15B35100DE2EB8 /* Preview Content */,
 			);
 			path = Concurrency_SwiftFull_Thinking;
@@ -146,9 +165,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35A18FF72B18419B0009EEBA /* 1) LearningTopics.swift in Sources */,
+				35A18FF52B1841190009EEBA /* 3) ImageDownloadAsyncAwait.swift in Sources */,
 				35C00FCA2B15B34D00DE2EB8 /* ContentView.swift in Sources */,
-				35C00FDA2B15EF9A00DE2EB8 /* LearningTopics.swift in Sources */,
-				35C00FD82B15B6E100DE2EB8 /* DoCatchTryThrows.swift in Sources */,
+				35C00FD82B15B6E100DE2EB8 /* 2) DoCatchTryThrows.swift in Sources */,
 				35C00FC82B15B34D00DE2EB8 /* Concurrency_SwiftFull_ThinkingApp.swift in Sources */,
 				35C00FD62B15B45B00DE2EB8 /* SwiftfulThinkingChapters.swift in Sources */,
 			);
