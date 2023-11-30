@@ -10,17 +10,22 @@ import SwiftUI
 class DownloadImageAsyncImageLoader {
     
     let url = URL(string: "https://picsum.photos/200")!
+    
+    private func handleResponse(data: Data?, response: URLResponse?) -> UIImage? {
+        guard
+            let data = data,
+            let image = UIImage(data: data),
+            let response = response as? HTTPURLResponse,
+            response.statusCode >= 200 && response.statusCode < 300 else {
+            return nil
+        }
+        return image
+    }
     func downloadEscaping(completionHandler: @escaping (_ image: UIImage?, _ error: Error?) -> () ) {
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            guard 
-                let data = data,
-                let image = UIImage(data: data),
-                let response = response as? HTTPURLResponse,
-                response.statusCode >= 200 && response.statusCode < 300 else {
-                completionHandler(nil,error)
-                return
-            }
-            completionHandler(image, nil)
+        URLSession.shared.dataTask(with: url) {[weak self] data, response, error in
+            guard let self else { return }
+            let image = handleResponse(data: data, response: response)
+            completionHandler(image, error)
         }
         .resume()
     }
@@ -34,7 +39,7 @@ class ImageDownloadAsyncAwaitViewModel: ObservableObject {
     func fetchImage() {
         imageToShow = UIImage(systemName: "heart.fill")
         loader.downloadEscaping { [weak self] image, error in
-            DispatchQueue.main.async { [weak self] in 
+            DispatchQueue.main.async { [weak self] in
                 guard let self else { return }
                 imageToShow = image
             }
