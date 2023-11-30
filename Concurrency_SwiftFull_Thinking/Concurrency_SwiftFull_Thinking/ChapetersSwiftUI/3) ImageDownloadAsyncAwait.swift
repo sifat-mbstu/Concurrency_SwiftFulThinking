@@ -37,6 +37,15 @@ class DownloadImageAsyncImageLoader {
             .mapError( { $0 } )
             .eraseToAnyPublisher()
     }
+    
+    func downloadWithAsync() async throws -> UIImage? {
+        do {
+            let (data, response) = try await URLSession.shared.data(from: url, delegate: nil)
+            return handleResponse(data: data, response: response)
+        } catch {
+            throw error
+        }
+    }
 }
 
 class ImageDownloadAsyncAwaitViewModel: ObservableObject {
@@ -44,7 +53,7 @@ class ImageDownloadAsyncAwaitViewModel: ObservableObject {
     @Published var imageToShow: UIImage? = UIImage(systemName: "heart.fill")
     let loader = DownloadImageAsyncImageLoader()
     var cancellables = Set<AnyCancellable>()
-    func fetchImage() {
+    func fetchImageWithEscaping() {
         
         loader.downloadEscaping { [weak self] image, error in
             DispatchQueue.main.async { [weak self] in
@@ -64,7 +73,15 @@ class ImageDownloadAsyncAwaitViewModel: ObservableObject {
                 imageToShow = image
             }
             .store(in: &cancellables)
-
+    }
+    
+    func fetchImageWithAsync() {
+        Task {
+            let image = try? await loader.downloadWithAsync()
+            await MainActor.run {
+                self.imageToShow = image
+            }
+        }
     }
 }
 
@@ -81,9 +98,11 @@ struct ImageDownloadAsyncAwait: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 250, height: 250)
+                    .border(.red, width: 4)
                     .onTapGesture {
-                        viewModel.fetchImageWithCombine()
+                        viewModel.fetchImageWithAsync()
                     }
+                    
             }
             Button(action: {
                 dismiss()
@@ -99,7 +118,7 @@ struct ImageDownloadAsyncAwait: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         }
         .onAppear {
-            viewModel.fetchImageWithCombine()
+            viewModel.fetchImageWithAsync()
         }
     }
 }
