@@ -80,7 +80,7 @@ struct DoCatchTryThrows: View {
                 .background(.black)
                 .foregroundColor(.white)
                 .onTapGesture {
-                    viewModel.fetchTitle4()
+                    viewModel.fetchTitle3()
                 }
         }
     }

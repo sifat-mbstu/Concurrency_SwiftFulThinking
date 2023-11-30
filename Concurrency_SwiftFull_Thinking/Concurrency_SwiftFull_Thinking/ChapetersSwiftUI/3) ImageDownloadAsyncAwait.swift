@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 class DownloadImageAsyncImageLoader {
     
@@ -29,21 +30,41 @@ class DownloadImageAsyncImageLoader {
         }
         .resume()
     }
+    
+    func downloadWithCombine() -> AnyPublisher<UIImage?, Error> {
+        URLSession.shared.dataTaskPublisher(for: url)
+            .map(handleResponse)
+            .mapError( { $0 } )
+            .eraseToAnyPublisher()
+    }
 }
 
 class ImageDownloadAsyncAwaitViewModel: ObservableObject {
     
-    @Published var imageToShow: UIImage? = nil
+    @Published var imageToShow: UIImage? = UIImage(systemName: "heart.fill")
     let loader = DownloadImageAsyncImageLoader()
-    
+    var cancellables = Set<AnyCancellable>()
     func fetchImage() {
-        imageToShow = UIImage(systemName: "heart.fill")
+        
         loader.downloadEscaping { [weak self] image, error in
             DispatchQueue.main.async { [weak self] in
                 guard let self else { return }
                 imageToShow = image
             }
         }
+    }
+    
+    func fetchImageWithCombine() {
+        loader.downloadWithCombine()
+            .receive(on: DispatchQueue.main)
+            .sink { _ in
+                print("In Sink")
+            } receiveValue: { [weak self] image in
+                guard let self else { return }
+                imageToShow = image
+            }
+            .store(in: &cancellables)
+
     }
 }
 
@@ -53,14 +74,6 @@ struct ImageDownloadAsyncAwait: View {
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        VStack {
-            Button("back") {
-                dismiss()
-            }
-            .background(.yellow)
-            .position(x: 10, y: 10)
-            .frame(width: 100, height: 44, alignment: .center)
-        }
         ZStack {
             
             if let image = viewModel.imageToShow {
@@ -68,10 +81,25 @@ struct ImageDownloadAsyncAwait: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 250, height: 250)
+                    .onTapGesture {
+                        viewModel.fetchImageWithCombine()
+                    }
             }
+            Button(action: {
+                dismiss()
+            }, label: {
+                Text("Back")
+                    .padding()
+                    
+            })
+            .background(.black)
+            .foregroundColor(.white)
+            .frame(minWidth: 44, minHeight: 44, alignment: .leading)
+            .padding()
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         }
         .onAppear {
-            viewModel.fetchImage()
+            viewModel.fetchImageWithCombine()
         }
     }
 }
