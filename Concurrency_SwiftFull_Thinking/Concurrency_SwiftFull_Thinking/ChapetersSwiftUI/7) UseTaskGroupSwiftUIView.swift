@@ -21,27 +21,20 @@ class TaskGroupDataManager {
     }
     
     func fetchImagesUsingAsyncGroup() async throws -> [UIImage] {
-        return try await withThrowingTaskGroup(of: UIImage.self) { group in
+        return try await withThrowingTaskGroup(of: UIImage?.self) { group in
             var images: [UIImage] = []
+            let urlStrings = getUrlStringArray()
             
-            group.addTask {
-                try await self.fetchImage(urlString: "https://picsum.photos/300")
+            for urlPath in urlStrings {
+                group.addTask {
+                    try? await self.fetchImage(urlString: urlPath)
+                }
             }
             
-            group.addTask {
-                try await self.fetchImage(urlString: "https://picsum.photos/300")
-            }
-            group.addTask {
-                try await self.fetchImage(urlString: "https://picsum.photos/300")
-            }
-            group.addTask {
-                try await self.fetchImage(urlString: "https://picsum.photos/300")
-            }
-            group.addTask {
-                try await self.fetchImage(urlString: "https://picsum.photos/300")
-            }
             for try await imageResult in group {
-                images.append(imageResult)
+                if let image = imageResult {
+                    images.append(image)
+                }
             }
             return images
         }
@@ -61,6 +54,14 @@ class TaskGroupDataManager {
             print(error.localizedDescription)
             throw error
         }
+    }
+    private func getUrlStringArray() -> [String]{
+        var urlStrings: [String] = []
+        let url = "https://picsum.photos/300"
+        for _ in 0..<10 {
+            urlStrings.append(url)
+        }
+        return urlStrings
     }
 }
 
