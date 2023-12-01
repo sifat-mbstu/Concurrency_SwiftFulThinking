@@ -44,6 +44,8 @@ struct ContentView: View {
             AnyView(ImageDownloadAsyncAwait())
         case .useOfAsyncAwait:
             AnyView(HowToUseAsyncAwait())
+        case .useTask:
+            AnyView(HowToUseTask())
         }
         
         

@@ -225,12 +225,17 @@ struct LearningTopicsView: View {
     var body: some View {
         VStack {
             ScrollView {
-                Button("back") {
+                Button(action: {
                     dismiss()
-                }
-                .background(.yellow)
-                .position(x: 10, y: 10)
-                .frame(width: 100, height: 44, alignment: .center)
+                }, label: {
+                    Text("Back")
+                        .padding()
+                    
+                })
+                .background(.black)
+                .foregroundColor(.white)
+                .frame(minWidth: 44, minHeight: 44, alignment: .topLeading)
+                .padding()
                 
                 Text(simpleText)
                     .frame(width: (UIScreen.main.bounds.width - 50.0), alignment: .leading)

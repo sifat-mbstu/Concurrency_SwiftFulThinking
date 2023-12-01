@@ -68,12 +68,17 @@ struct DoCatchTryThrows: View {
     @Environment(\.dismiss) var dismiss
     var body: some View {
         VStack {
-            Button("back") {
+            Button(action: {
                 dismiss()
-            }
-            .background(.yellow)
-            .position(x: 10, y: 10)
-            .frame(width: 100, height: 44, alignment: .center)
+            }, label: {
+                Text("Back")
+                    .padding()
+                
+            })
+            .background(.black)
+            .foregroundColor(.white)
+            .frame(minWidth: 44, minHeight: 44, alignment: .topLeading)
+            .padding()
             
             Text(viewModel.text)
                 .frame(width: 300, height: 300)
