@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var showingSheet = false
     @State private var selectedCase: SwifFulChapters = .startLearn
+    @State var isDarkMode: Bool = false
     var body: some View {
         NavigationStack {
             Form {
@@ -23,7 +24,14 @@ struct ContentView: View {
                 }
             }
         }
+        
         VStack {
+            HStack {
+                Toggle(isOn: $isDarkMode) {
+                    Text("Dark Mode")
+                }
+            }
+            
             Button("Show Sheet") {
                 showingSheet.toggle()
             }
@@ -32,7 +40,10 @@ struct ContentView: View {
             }
         }
         .padding()
+        
+        .preferredColorScheme(isDarkMode ? .dark : .light)
     }
+        
     
     func getView(for currentChapter: SwifFulChapters) -> some View {
         switch currentChapter {
@@ -52,6 +63,7 @@ struct ContentView: View {
     }
     
 }
+    
 
 #Preview {
     ContentView()
