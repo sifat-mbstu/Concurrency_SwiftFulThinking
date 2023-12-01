@@ -15,6 +15,7 @@
 		35C00FCF2B15B35100DE2EB8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35C00FCE2B15B35100DE2EB8 /* Preview Assets.xcassets */; };
 		35C00FD62B15B45B00DE2EB8 /* SwiftfulThinkingChapters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C00FD52B15B45B00DE2EB8 /* SwiftfulThinkingChapters.swift */; };
 		35C00FD82B15B6E100DE2EB8 /* 2) DoCatchTryThrows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C00FD72B15B6E100DE2EB8 /* 2) DoCatchTryThrows.swift */; };
+		E91ABB0B2B1A203F00EACEC1 /* 6) AsyncLetSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91ABB0A2B1A203F00EACEC1 /* 6) AsyncLetSwiftUIView.swift */; };
 		E9B0A3AB2B19A244004BE38C /* 4) HowToUseAsyncAwait.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B0A3AA2B19A244004BE38C /* 4) HowToUseAsyncAwait.swift */; };
 		E9B0A3AD2B19AC04004BE38C /* 5) HowToUseTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B0A3AC2B19AC04004BE38C /* 5) HowToUseTask.swift */; };
 /* End PBXBuildFile section */
@@ -29,6 +30,7 @@
 		35C00FCE2B15B35100DE2EB8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		35C00FD52B15B45B00DE2EB8 /* SwiftfulThinkingChapters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftfulThinkingChapters.swift; sourceTree = "<group>"; };
 		35C00FD72B15B6E100DE2EB8 /* 2) DoCatchTryThrows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "2) DoCatchTryThrows.swift"; sourceTree = "<group>"; };
+		E91ABB0A2B1A203F00EACEC1 /* 6) AsyncLetSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "6) AsyncLetSwiftUIView.swift"; sourceTree = "<group>"; };
 		E9B0A3AA2B19A244004BE38C /* 4) HowToUseAsyncAwait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "4) HowToUseAsyncAwait.swift"; sourceTree = "<group>"; };
 		E9B0A3AC2B19AC04004BE38C /* 5) HowToUseTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "5) HowToUseTask.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,6 +55,7 @@
 				35A18FF42B1841190009EEBA /* 3) ImageDownloadAsyncAwait.swift */,
 				E9B0A3AA2B19A244004BE38C /* 4) HowToUseAsyncAwait.swift */,
 				E9B0A3AC2B19AC04004BE38C /* 5) HowToUseTask.swift */,
+				E91ABB0A2B1A203F00EACEC1 /* 6) AsyncLetSwiftUIView.swift */,
 			);
 			path = ChapetersSwiftUI;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				35C00FC82B15B34D00DE2EB8 /* Concurrency_SwiftFull_ThinkingApp.swift in Sources */,
 				35C00FD62B15B45B00DE2EB8 /* SwiftfulThinkingChapters.swift in Sources */,
 				E9B0A3AD2B19AC04004BE38C /* 5) HowToUseTask.swift in Sources */,
+				E91ABB0B2B1A203F00EACEC1 /* 6) AsyncLetSwiftUIView.swift in Sources */,
 				E9B0A3AB2B19A244004BE38C /* 4) HowToUseAsyncAwait.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

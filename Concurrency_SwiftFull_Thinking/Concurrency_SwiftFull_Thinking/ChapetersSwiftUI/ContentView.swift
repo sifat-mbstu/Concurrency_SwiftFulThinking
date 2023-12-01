@@ -57,6 +57,8 @@ struct ContentView: View {
             AnyView(HowToUseAsyncAwait())
         case .useTask:
             AnyView(HowToUseTask())
+        case .asyncLet:
+            AnyView(AsyncLetSwiftUIView())
         }
         
         
