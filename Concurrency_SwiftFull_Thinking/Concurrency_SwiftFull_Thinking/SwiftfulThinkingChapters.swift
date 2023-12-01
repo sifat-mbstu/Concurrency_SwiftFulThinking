@@ -11,6 +11,7 @@ enum SwifFulChapters: Int,CaseIterable {
     case startLearn
     case doTryCatchThrows
     case imageDownloadAsyncAwait
+    case useOfAsyncAwait
 }
 
 extension SwifFulChapters {
@@ -22,6 +23,8 @@ extension SwifFulChapters {
             return "Do-Try-Catch-Throws"
         case .imageDownloadAsyncAwait:
             return "Download Images With Async/Await, @escaping and Combine"
+        case .useOfAsyncAwait:
+            return "How to use async/await keyword in Swift"
         }
         
     }

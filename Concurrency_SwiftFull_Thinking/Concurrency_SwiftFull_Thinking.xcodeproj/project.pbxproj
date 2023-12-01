@@ -15,6 +15,7 @@
 		35C00FCF2B15B35100DE2EB8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35C00FCE2B15B35100DE2EB8 /* Preview Assets.xcassets */; };
 		35C00FD62B15B45B00DE2EB8 /* SwiftfulThinkingChapters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C00FD52B15B45B00DE2EB8 /* SwiftfulThinkingChapters.swift */; };
 		35C00FD82B15B6E100DE2EB8 /* 2) DoCatchTryThrows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C00FD72B15B6E100DE2EB8 /* 2) DoCatchTryThrows.swift */; };
+		E9B0A3AB2B19A244004BE38C /* 4) HowToUseAsyncAwait.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B0A3AA2B19A244004BE38C /* 4) HowToUseAsyncAwait.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		35C00FCE2B15B35100DE2EB8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		35C00FD52B15B45B00DE2EB8 /* SwiftfulThinkingChapters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftfulThinkingChapters.swift; sourceTree = "<group>"; };
 		35C00FD72B15B6E100DE2EB8 /* 2) DoCatchTryThrows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "2) DoCatchTryThrows.swift"; sourceTree = "<group>"; };
+		E9B0A3AA2B19A244004BE38C /* 4) HowToUseAsyncAwait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "4) HowToUseAsyncAwait.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 				35A18FF32B1840E40009EEBA /* 1) LearningTopics.swift */,
 				35C00FD72B15B6E100DE2EB8 /* 2) DoCatchTryThrows.swift */,
 				35A18FF42B1841190009EEBA /* 3) ImageDownloadAsyncAwait.swift */,
+				E9B0A3AA2B19A244004BE38C /* 4) HowToUseAsyncAwait.swift */,
 			);
 			path = ChapetersSwiftUI;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				35C00FD82B15B6E100DE2EB8 /* 2) DoCatchTryThrows.swift in Sources */,
 				35C00FC82B15B34D00DE2EB8 /* Concurrency_SwiftFull_ThinkingApp.swift in Sources */,
 				35C00FD62B15B45B00DE2EB8 /* SwiftfulThinkingChapters.swift in Sources */,
+				E9B0A3AB2B19A244004BE38C /* 4) HowToUseAsyncAwait.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
