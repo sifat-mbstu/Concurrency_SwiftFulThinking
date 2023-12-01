@@ -20,6 +20,32 @@ class TaskGroupDataManager {
         
     }
     
+    func fetchImagesUsingAsyncGroup() async throws -> [UIImage] {
+        return try await withThrowingTaskGroup(of: UIImage.self) { group in
+            var images: [UIImage] = []
+            
+            group.addTask {
+                try await self.fetchImage(urlString: "https://picsum.photos/300")
+            }
+            
+            group.addTask {
+                try await self.fetchImage(urlString: "https://picsum.photos/300")
+            }
+            group.addTask {
+                try await self.fetchImage(urlString: "https://picsum.photos/300")
+            }
+            group.addTask {
+                try await self.fetchImage(urlString: "https://picsum.photos/300")
+            }
+            group.addTask {
+                try await self.fetchImage(urlString: "https://picsum.photos/300")
+            }
+            for try await imageResult in group {
+                images.append(imageResult)
+            }
+            return images
+        }
+    }
     private func fetchImage(urlString: String ) async throws -> UIImage {
         guard let url = URL(string: urlString) else {
             throw URLError(.badURL)
@@ -47,7 +73,13 @@ class UseTaskGroupSwiftUIViewModel: ObservableObject {
             await MainActor.run {
                 imagesToShow.append(contentsOf: images)
             }
-            
+        }
+    }
+    func getImagesUsingTaskGroup() async {
+        if let images = try? await manager.fetchImagesUsingAsyncGroup() {
+            await MainActor.run {
+                imagesToShow.append(contentsOf: images)
+            }
         }
     }
 }
@@ -85,7 +117,7 @@ struct UseTaskGroupSwiftUIView: View {
             .navigationTitle("Task Group")
         }
         .task {
-            await viewModel.getImages()
+            await viewModel.getImagesUsingTaskGroup()
         }
     }
 }
