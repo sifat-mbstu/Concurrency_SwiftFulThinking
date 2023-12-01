@@ -79,7 +79,7 @@ struct DoCatchTryThrows: View {
             .foregroundColor(.white)
             .frame(minWidth: 44, minHeight: 44, alignment: .topLeading)
             .padding()
-            
+            Text("Tap to Change the View")
             Text(viewModel.text)
                 .frame(width: 300, height: 300)
                 .background(.black)

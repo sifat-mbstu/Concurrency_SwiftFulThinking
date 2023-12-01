@@ -94,6 +94,7 @@ struct ImageDownloadAsyncAwait: View {
         ZStack {
             
             if let image = viewModel.imageToShow {
+                
                 Image(uiImage: image)
                     .resizable()
                     .scaledToFit()
@@ -104,6 +105,13 @@ struct ImageDownloadAsyncAwait: View {
                     }
                     
             }
+            Text("Tap The Image")
+                .foregroundColor(.red)
+                .font(.title)
+                .frame(minWidth: 44, minHeight: 44, alignment: .leading)
+                .padding()
+                .frame(maxWidth: 370, maxHeight: 370, alignment: .top)
+            
             Button(action: {
                 dismiss()
             }, label: {

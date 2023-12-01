@@ -19,7 +19,7 @@ struct ContentView: View {
                             Text($0.title)
                         }
                     }
-                    .pickerStyle(.wheel)
+                    .pickerStyle(.inline)
                 }
             }
         }
