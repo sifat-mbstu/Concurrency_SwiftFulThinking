@@ -46,20 +46,14 @@ struct AsyncLetSwiftUIView: View {
             .onAppear{
                 Task {
                     do {
-                        let image1 = try await fetchImage()
-                        self.images.append(image1)
+                        async let fetchImage1 = fetchImage()
+                        async let fetchImage2 = fetchImage()
+                        async let fetchImage3 = fetchImage()
+                        async let fetchImage4 = fetchImage()
+                        async let fetchImage5 = fetchImage()
                         
-                        let image2 = try await fetchImage()
-                        self.images.append(image2)
-                        
-                        let image3 = try await fetchImage()
-                        self.images.append(image3)
-                        
-                        let image4 = try await fetchImage()
-                        self.images.append(image4)
-                        
-                        let image5 = try await fetchImage()
-                        self.images.append(image5)
+                        let (image1, image2, image3, image4, image5) = await (try fetchImage1, try fetchImage2, try fetchImage3, try fetchImage4, try fetchImage5)
+                        self.images.append(contentsOf: [image1, image2, image3, image4, image5])
                         
                     } catch { }
                 }
