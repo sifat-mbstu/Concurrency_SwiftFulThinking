@@ -26,6 +26,7 @@ class HowToUseTaskViewModel: ObservableObject {
             let (imageData, response) = try await URLSession.shared.data(from: url)
             await MainActor.run {
                 image1 = processResponse(imageData, response)
+                print("image1 Downloaded and showed Successfully :)")
             }
         } catch {
             print(error.localizedDescription)
@@ -36,6 +37,7 @@ class HowToUseTaskViewModel: ObservableObject {
             let (imageData, response) = try await URLSession.shared.data(from: url)
             await MainActor.run {
                 image2 = processResponse(imageData, response)
+                print("image2 Downloaded and showed Successfully :)")
             }
         } catch {
             print(error.localizedDescription)
@@ -47,6 +49,8 @@ struct HowToUseTask: View {
     
     @StateObject var viewModel = HowToUseTaskViewModel()
     @Environment (\.dismiss) var dismiss
+    @State var fetchTask1: Task<(), Never>? = nil
+    @State var fetchTask2: Task<(), Never>? = nil
     var body: some View {
         VStack {
             Button(action: {
@@ -69,9 +73,11 @@ struct HowToUseTask: View {
                     .scaledToFit()
                     .frame(width: 200, height: 200)
                     .onTapGesture {
-                        Task {
+//                        fetchTask1?.cancel()
+                        fetchTask1 = Task {
                             await viewModel.fetchImage1()
                         }
+                        print("DONE fetchTask1!")
                     }
             }
             if let image = viewModel.image2 {
@@ -80,54 +86,68 @@ struct HowToUseTask: View {
                     .scaledToFit()
                     .frame(width: 200, height: 200)
                     .onTapGesture {
-                        Task {
+//                        fetchTask2?.cancel()
+                        fetchTask2 = Task {
                             await viewModel.fetchImage2()
                         }
+                        print("DONE fetchTask2!")
                     }
             }
         }
+        .task {
+            await viewModel.fetchImage1()
+            await viewModel.fetchImage2()
+        }
+//        .onDisappear() {
+//            fetchTask1?.cancel()
+//            fetchTask2?.cancel()
+//        }
         .onAppear {
             /*
-            Task {
-                await viewModel.fetchImage1()
-                await viewModel.fetchImage2()
-            }
-            Task {
-                await viewModel.fetchImage1()
-                await viewModel.fetchImage2()
-            } */
+             Task {
+             await viewModel.fetchImage1()
+             await viewModel.fetchImage2()
+             }
+             
+            // MARK: YIELD()
+           
+             Task(priority: .high) {
+             //                try? await Task.sleep(nanoseconds: 2_000_000_000)
+             await Task.yield()
+             print("1) high:: \(Thread.current): \(Task.currentPriority)")
+             }
+             Task(priority: .userInitiated) {
+             print("2) userInitiated:: \(Thread.current): \(Task.currentPriority)")
+             }
+             Task(priority: .none) {
+             print("3) none:: \(Thread.current): \(Task.currentPriority)")
+             }
+             Task(priority: .medium) {
+             print("4) medium:: \(Thread.current): \(Task.currentPriority)")
+             }
+             Task(priority: .default) {
+             print("5) default:: \(Thread.current): \(Task.currentPriority)")
+             }
+             Task(priority: .utility) {
+             print("6) utility:: \(Thread.current): \(Task.currentPriority)")
+             }
+             Task(priority: .low) {
+             print("7) LOW:: \(Thread.current ): \(Task.currentPriority)")
+             }
+             Task(priority: .background) {
+             print("8) background:: \(Thread.current): \(Task.currentPriority)")
+             }
+             
             
-            Task(priority: .high) {
-                print("1) high:: \(Thread.current): \(Task.currentPriority)")
-            }
-            Task(priority: .userInitiated) {
-                print("2) userInitiated:: \(Thread.current): \(Task.currentPriority)")
-            }
-            Task(priority: .none) {
-                print("3) none:: \(Thread.current): \(Task.currentPriority)")
-            }
-            Task(priority: .medium) {
-                print("4) medium:: \(Thread.current): \(Task.currentPriority)")
-            }
-            Task(priority: .default) {
-                print("5) default:: \(Thread.current): \(Task.currentPriority)")
-            }
-            
-            Task(priority: .utility) {
-                print("6) utility:: \(Thread.current): \(Task.currentPriority)")
-            }
-            
+            //MARK: Nested Task
             Task(priority: .low) {
-                print("7) LOW:: \(Thread.current ): \(Task.currentPriority)")
+                print("Low:: \(Thread.current): \(Task.currentPriority)")
+                Task.detached {
+                    print("Detached: Low:: \(Thread.current): \(Task.currentPriority)")
+                }
+                
             }
-            Task(priority: .background) {
-                print("8) background:: \(Thread.current): \(Task.currentPriority)")
-            }
-            
-            
-            
-            
-            
+             */
         }
     }
 }

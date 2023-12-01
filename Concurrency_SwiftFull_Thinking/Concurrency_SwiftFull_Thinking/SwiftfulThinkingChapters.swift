@@ -17,18 +17,20 @@ enum SwifFulChapters: Int,CaseIterable {
 
 extension SwifFulChapters {
     var title: String {
+         var titleString =
         switch self {
         case .startLearn:
-            return "Start Learn"
+            "Start Learn"
         case .doTryCatchThrows:
-            return "Do-Try-Catch-Throws"
+            "Do-Try-Catch-Throws"
         case .imageDownloadAsyncAwait:
-            return "Download Images With Async/Await, @escaping and Combine"
+            "Download Images With Async/Await, @escaping and Combine"
         case .useOfAsyncAwait:
-            return "How to use async/await keyword in Swift"
+            "How to use async/await keyword in Swift"
         case .useTask:
-            return "How to use Task and .task in Swift"
+            "How to use Task and .task in Swift"
         }
-        
+        titleString = "\(self.rawValue). \(titleString)"
+        return titleString
     }
 }
