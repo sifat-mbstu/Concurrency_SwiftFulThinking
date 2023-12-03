@@ -42,7 +42,7 @@ struct AsyncLetSwiftUIView: View {
                     }
                 }
             }
-            .navigationTitle("Async Let")
+            .navigationTitle("Async Let1")
             .onAppear{
                 Task {
                     do {

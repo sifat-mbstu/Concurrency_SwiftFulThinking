@@ -61,6 +61,8 @@ struct ContentView: View {
             AnyView(AsyncLetSwiftUIView())
         case .useTaskGroup:
             AnyView(UseTaskGroupSwiftUIView())
+        case .useContinuation:
+            AnyView(CheckContinuationSwiftUIView())
         }
         
         

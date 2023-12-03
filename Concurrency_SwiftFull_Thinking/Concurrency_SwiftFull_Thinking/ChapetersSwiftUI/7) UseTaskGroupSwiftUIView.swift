@@ -57,7 +57,7 @@ class TaskGroupDataManager {
     }
     private func getUrlStringArray() -> [String]{
         var urlStrings: [String] = []
-        let url = "https://picsum.photos/300"
+        let url = "https://picsum.photos/100"
         for _ in 0..<10 {
             urlStrings.append(url)
         }
