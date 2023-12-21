@@ -63,6 +63,8 @@ struct ContentView: View {
             AnyView(UseTaskGroupSwiftUIView())
         case .useContinuation:
             AnyView(CheckContinuationSwiftUIView())
+        case .structVsClassVsActor:
+            AnyView(ActorClassStructSwiftUIView())
         }
         
         

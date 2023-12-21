@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3545883E2B3438110022DC98 /* 9) ActorClassStructSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3545883D2B3438110022DC98 /* 9) ActorClassStructSwiftUIView.swift */; };
 		35A18FF52B1841190009EEBA /* 3) ImageDownloadAsyncAwait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A18FF42B1841190009EEBA /* 3) ImageDownloadAsyncAwait.swift */; };
 		35A18FF72B18419B0009EEBA /* 1) LearningTopics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A18FF32B1840E40009EEBA /* 1) LearningTopics.swift */; };
 		35C00FC82B15B34D00DE2EB8 /* Concurrency_SwiftFull_ThinkingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C00FC72B15B34D00DE2EB8 /* Concurrency_SwiftFull_ThinkingApp.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3545883D2B3438110022DC98 /* 9) ActorClassStructSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "9) ActorClassStructSwiftUIView.swift"; sourceTree = "<group>"; };
 		35A18FF32B1840E40009EEBA /* 1) LearningTopics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1) LearningTopics.swift"; sourceTree = "<group>"; };
 		35A18FF42B1841190009EEBA /* 3) ImageDownloadAsyncAwait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "3) ImageDownloadAsyncAwait.swift"; sourceTree = "<group>"; };
 		35C00FC42B15B34D00DE2EB8 /* Concurrency_SwiftFull_Thinking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Concurrency_SwiftFull_Thinking.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +64,7 @@
 				E91ABB0A2B1A203F00EACEC1 /* 6) AsyncLetSwiftUIView.swift */,
 				E91ABB0C2B1A40FE00EACEC1 /* 7) UseTaskGroupSwiftUIView.swift */,
 				E933545A2B1CB971000ED8A9 /* 8) CheckContinuationSwiftUIView.swift */,
+				3545883D2B3438110022DC98 /* 9) ActorClassStructSwiftUIView.swift */,
 			);
 			path = ChapetersSwiftUI;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				E9B0A3AD2B19AC04004BE38C /* 5) HowToUseTask.swift in Sources */,
 				E91ABB0B2B1A203F00EACEC1 /* 6) AsyncLetSwiftUIView.swift in Sources */,
 				E9B0A3AB2B19A244004BE38C /* 4) HowToUseAsyncAwait.swift in Sources */,
+				3545883E2B3438110022DC98 /* 9) ActorClassStructSwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

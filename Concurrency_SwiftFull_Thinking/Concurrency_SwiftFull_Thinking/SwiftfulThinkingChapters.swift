@@ -16,6 +16,7 @@ enum SwifFulChapters: Int,CaseIterable {
     case asyncLet
     case useTaskGroup
     case useContinuation
+    case structVsClassVsActor
 }
 
 extension SwifFulChapters {
@@ -38,6 +39,8 @@ extension SwifFulChapters {
             "How to use TaskGroup to perform concurrent Tasks in Swift"
         case .useContinuation:
             "How to use Continuations in Swift (withCheckedThrowingContinuation)"
+        case .structVsClassVsActor:
+            "Swift: Struct vs Class vs Actor, Value vs Reference Types, Stack vs Heap"
         }
         titleString = "Concurrency #\(self.rawValue): \(titleString)"
         return titleString
