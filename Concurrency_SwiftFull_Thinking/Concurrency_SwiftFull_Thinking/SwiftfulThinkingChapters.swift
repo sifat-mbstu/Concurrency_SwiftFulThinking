@@ -17,6 +17,8 @@ enum SwifFulChapters: Int,CaseIterable {
     case useTaskGroup
     case useContinuation
     case structVsClassVsActor
+    case animationLearnSwiftUI
+    case polygonAnimation1
 }
 
 extension SwifFulChapters {
@@ -41,6 +43,10 @@ extension SwifFulChapters {
             "How to use Continuations in Swift (withCheckedThrowingContinuation)"
         case .structVsClassVsActor:
             "Swift: Struct vs Class vs Actor, Value vs Reference Types, Stack vs Heap"
+        case .animationLearnSwiftUI:
+            "Part-1: Advanced SwiftUI Animations: (https://swiftui-lab.com/swiftui-animations-part1/)"
+        case .polygonAnimation1:
+            "Example2: PolygonAnimation"
         }
         titleString = "Concurrency #\(self.rawValue): \(titleString)"
         return titleString

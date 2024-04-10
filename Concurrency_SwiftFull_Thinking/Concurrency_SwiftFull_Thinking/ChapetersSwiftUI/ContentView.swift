@@ -65,6 +65,10 @@ struct ContentView: View {
             AnyView(CheckContinuationSwiftUIView())
         case .structVsClassVsActor:
             AnyView(ActorClassStructSwiftUIView())
+        case .animationLearnSwiftUI:
+            AnyView(AdvancedSwiftUIAnimation())
+        case .polygonAnimation1:
+            AnyView(Example2PolygonAnimation())
         }
         
         
