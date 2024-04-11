@@ -42,33 +42,33 @@ struct ContentView: View {
         .padding()
         .preferredColorScheme(isDarkMode ? .dark : .light)
     }
-    
-    func getView(for currentChapter: SwifFulChapters) -> some View {
+    @ViewBuilder
+    private func getView(for currentChapter: SwifFulChapters) -> some View {
         switch currentChapter {
         case .startLearn:
-            AnyView(LearningTopicsView())
+            LearningTopicsView()
         case .doTryCatchThrows:
-            AnyView(DoCatchTryThrows())
+            DoCatchTryThrows()
         case .imageDownloadAsyncAwait:
-            AnyView(ImageDownloadAsyncAwait())
+            ImageDownloadAsyncAwait()
         case .useOfAsyncAwait:
-            AnyView(HowToUseAsyncAwait())
+            HowToUseAsyncAwait()
         case .useTask:
-            AnyView(HowToUseTask())
+            HowToUseTask()
         case .asyncLet:
-            AnyView(AsyncLetSwiftUIView())
+            AsyncLetSwiftUIView()
         case .useTaskGroup:
-            AnyView(UseTaskGroupSwiftUIView())
+            UseTaskGroupSwiftUIView()
         case .useContinuation:
-            AnyView(CheckContinuationSwiftUIView())
+            CheckContinuationSwiftUIView()
         case .structVsClassVsActor:
-            AnyView(ActorClassStructSwiftUIView())
+            ActorClassStructSwiftUIView()
         case .animationLearnSwiftUI:
-            AnyView(AdvancedSwiftUIAnimation())
+            AdvancedSwiftUIAnimation()
         case .polygonAnimation1:
-            AnyView(Example2PolygonAnimation())
+            Example2PolygonAnimation()
         case .demistifySwiftUI:
-            AnyView(DemistifySwiftUI(model: DemistifySwiftViewModel(allDogs: DemistifySwiftViewModel.getDogs())))
+            DemistifySwiftUI(model: DemistifySwiftViewModel(allDogs: DemistifySwiftViewModel.getDogs()))
         }
     }
 }
