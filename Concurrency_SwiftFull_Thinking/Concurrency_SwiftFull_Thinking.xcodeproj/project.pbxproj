@@ -18,6 +18,7 @@
 		35C00FD82B15B6E100DE2EB8 /* 2) DoCatchTryThrows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C00FD72B15B6E100DE2EB8 /* 2) DoCatchTryThrows.swift */; };
 		E91ABB0B2B1A203F00EACEC1 /* 6) AsyncLetSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91ABB0A2B1A203F00EACEC1 /* 6) AsyncLetSwiftUIView.swift */; };
 		E91ABB0D2B1A40FE00EACEC1 /* 7) UseTaskGroupSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91ABB0C2B1A40FE00EACEC1 /* 7) UseTaskGroupSwiftUIView.swift */; };
+		E932E5A62BC6EBA400C7C4CB /* 13) DemistifySwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E932E5A52BC6EBA400C7C4CB /* 13) DemistifySwiftUI.swift */; };
 		E933545B2B1CB971000ED8A9 /* 8) CheckContinuationSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E933545A2B1CB971000ED8A9 /* 8) CheckContinuationSwiftUIView.swift */; };
 		E9A25FCE2B3DF15100656348 /* 11) AdvancedSwiftUIAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A25FCD2B3DF15100656348 /* 11) AdvancedSwiftUIAnimation.swift */; };
 		E9A25FD02B3DFCC300656348 /* 12) PolygonAnimation1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A25FCF2B3DFCC300656348 /* 12) PolygonAnimation1.swift */; };
@@ -38,6 +39,7 @@
 		35C00FD72B15B6E100DE2EB8 /* 2) DoCatchTryThrows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "2) DoCatchTryThrows.swift"; sourceTree = "<group>"; };
 		E91ABB0A2B1A203F00EACEC1 /* 6) AsyncLetSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "6) AsyncLetSwiftUIView.swift"; sourceTree = "<group>"; };
 		E91ABB0C2B1A40FE00EACEC1 /* 7) UseTaskGroupSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "7) UseTaskGroupSwiftUIView.swift"; sourceTree = "<group>"; };
+		E932E5A52BC6EBA400C7C4CB /* 13) DemistifySwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "13) DemistifySwiftUI.swift"; sourceTree = "<group>"; };
 		E933545A2B1CB971000ED8A9 /* 8) CheckContinuationSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "8) CheckContinuationSwiftUIView.swift"; sourceTree = "<group>"; };
 		E9A25FCD2B3DF15100656348 /* 11) AdvancedSwiftUIAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "11) AdvancedSwiftUIAnimation.swift"; sourceTree = "<group>"; };
 		E9A25FCF2B3DFCC300656348 /* 12) PolygonAnimation1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "12) PolygonAnimation1.swift"; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				3545883D2B3438110022DC98 /* 9) ActorClassStructSwiftUIView.swift */,
 				E9A25FCD2B3DF15100656348 /* 11) AdvancedSwiftUIAnimation.swift */,
 				E9A25FCF2B3DFCC300656348 /* 12) PolygonAnimation1.swift */,
+				E932E5A52BC6EBA400C7C4CB /* 13) DemistifySwiftUI.swift */,
 			);
 			path = ChapetersSwiftUI;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35A18FF72B18419B0009EEBA /* 1) LearningTopics.swift in Sources */,
+				E932E5A62BC6EBA400C7C4CB /* 13) DemistifySwiftUI.swift in Sources */,
 				35A18FF52B1841190009EEBA /* 3) ImageDownloadAsyncAwait.swift in Sources */,
 				35C00FCA2B15B34D00DE2EB8 /* ContentView.swift in Sources */,
 				E91ABB0D2B1A40FE00EACEC1 /* 7) UseTaskGroupSwiftUIView.swift in Sources */,

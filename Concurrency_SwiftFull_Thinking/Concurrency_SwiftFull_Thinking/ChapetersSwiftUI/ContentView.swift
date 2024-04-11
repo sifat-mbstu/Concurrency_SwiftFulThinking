@@ -40,10 +40,8 @@ struct ContentView: View {
             }
         }
         .padding()
-        
         .preferredColorScheme(isDarkMode ? .dark : .light)
     }
-        
     
     func getView(for currentChapter: SwifFulChapters) -> some View {
         switch currentChapter {
@@ -69,13 +67,11 @@ struct ContentView: View {
             AnyView(AdvancedSwiftUIAnimation())
         case .polygonAnimation1:
             AnyView(Example2PolygonAnimation())
+        case .demistifySwiftUI:
+            AnyView(DemistifySwiftUI(model: DemistifySwiftViewModel(allDogs: DemistifySwiftViewModel.getDogs())))
         }
-        
-        
     }
-    
 }
-    
 
 #Preview {
     ContentView()

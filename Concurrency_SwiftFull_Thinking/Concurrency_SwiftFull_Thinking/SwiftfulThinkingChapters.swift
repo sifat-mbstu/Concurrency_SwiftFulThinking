@@ -19,6 +19,7 @@ enum SwifFulChapters: Int,CaseIterable {
     case structVsClassVsActor
     case animationLearnSwiftUI
     case polygonAnimation1
+    case demistifySwiftUI
 }
 
 extension SwifFulChapters {
@@ -47,6 +48,8 @@ extension SwifFulChapters {
             "Part-1: Advanced SwiftUI Animations: (https://swiftui-lab.com/swiftui-animations-part1/)"
         case .polygonAnimation1:
             "Example2: PolygonAnimation"
+        case .demistifySwiftUI:
+            "Demistify SwiftUI"
         }
         titleString = "Concurrency #\(self.rawValue): \(titleString)"
         return titleString
