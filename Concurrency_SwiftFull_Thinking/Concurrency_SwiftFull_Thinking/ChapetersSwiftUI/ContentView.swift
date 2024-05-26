@@ -65,6 +65,8 @@ struct ContentView: View {
             AnyView(CheckContinuationSwiftUIView())
         case .structVsClassVsActor:
             AnyView(ActorClassStructSwiftUIView())
+        case .globalActor:
+            AnyView(GlobalActorBootcamp())
         }
         
         

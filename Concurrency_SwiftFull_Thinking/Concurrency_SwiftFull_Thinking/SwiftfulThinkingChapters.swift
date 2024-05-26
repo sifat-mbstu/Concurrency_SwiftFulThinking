@@ -17,6 +17,7 @@ enum SwifFulChapters: Int,CaseIterable {
     case useTaskGroup
     case useContinuation
     case structVsClassVsActor
+    case globalActor
 }
 
 extension SwifFulChapters {
@@ -41,6 +42,8 @@ extension SwifFulChapters {
             "How to use Continuations in Swift (withCheckedThrowingContinuation)"
         case .structVsClassVsActor:
             "Swift: Struct vs Class vs Actor, Value vs Reference Types, Stack vs Heap"
+        case .globalActor:
+            "Swift Concurrency #10 | How to use Global Actors in Swift (@globalActor)"
         }
         titleString = "Concurrency #\(self.rawValue): \(titleString)"
         return titleString
