@@ -18,6 +18,9 @@ enum SwifFulChapters: Int,CaseIterable {
     case useContinuation
     case structVsClassVsActor
     case globalActor
+    case animationLearnSwiftUI
+    case polygonAnimation1
+    case demistifySwiftUI
 }
 
 extension SwifFulChapters {
@@ -44,6 +47,12 @@ extension SwifFulChapters {
             "Swift: Struct vs Class vs Actor, Value vs Reference Types, Stack vs Heap"
         case .globalActor:
             "Swift Concurrency #10 | How to use Global Actors in Swift (@globalActor)"
+        case .animationLearnSwiftUI:
+            "Part-1: Advanced SwiftUI Animations: (https://swiftui-lab.com/swiftui-animations-part1/)"
+        case .polygonAnimation1:
+            "Example2: PolygonAnimation"
+        case .demistifySwiftUI:
+            "Demistify SwiftUI"
         }
         titleString = "Concurrency #\(self.rawValue): \(titleString)"
         return titleString

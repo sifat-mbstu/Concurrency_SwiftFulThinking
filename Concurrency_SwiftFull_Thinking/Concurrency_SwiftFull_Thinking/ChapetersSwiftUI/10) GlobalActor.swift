@@ -16,7 +16,7 @@ class GlobalActorBootcampViewModel: ObservableObject {
 }
 
 struct GlobalActorBootcamp: View {
-    @StateObject private var viewModel: GlobalActorBootcampViewModel()
+    @StateObject private var viewModel = GlobalActorBootcampViewModel()
     
     var body: some View {
         ScrollView {
@@ -32,10 +32,10 @@ struct GlobalActorBootcamp: View {
         }
     }
 }
-struct GlobalActorBootcamp_Previews: PreviewProvider {
-    static var previews: some View {
-        GlobalActorBootcamp()
-    }
-    
-    
-}
+//struct GlobalActorBootcamp_Previews: PreviewProvider {
+//    static var previews: some View {
+//        GlobalActorBootcamp(viewModel: <#GlobalActorBootcampViewModel#>)
+//    }
+//    
+//    
+//}
