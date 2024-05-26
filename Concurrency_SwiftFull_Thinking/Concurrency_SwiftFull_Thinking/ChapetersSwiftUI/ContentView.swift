@@ -72,6 +72,8 @@ struct ContentView: View {
             Example2PolygonAnimation()
         case .demistifySwiftUI:
             DemistifySwiftUI(model: DemistifySwiftViewModel(allDogs: DemistifySwiftViewModel.getDogs()))
+        case .concurrencyIcode:
+            iCodeConcurrency()
         }
     }
 }

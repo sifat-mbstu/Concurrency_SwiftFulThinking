@@ -21,6 +21,7 @@ enum SwifFulChapters: Int,CaseIterable {
     case animationLearnSwiftUI
     case polygonAnimation1
     case demistifySwiftUI
+    case concurrencyIcode
 }
 
 extension SwifFulChapters {
@@ -53,6 +54,8 @@ extension SwifFulChapters {
             "Example2: PolygonAnimation"
         case .demistifySwiftUI:
             "Demistify SwiftUI"
+        case .concurrencyIcode:
+            "Concurrency From iCode Channel"
         }
         titleString = "Concurrency #\(self.rawValue): \(titleString)"
         return titleString
